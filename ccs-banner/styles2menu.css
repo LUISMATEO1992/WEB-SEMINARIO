@@ -1,0 +1,85 @@
+/* Slider
+http://www.freshdesignweb.com/drop-down-responsive-menu-with-css3-and-jquery.html
+*/
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700|Yanone+Kaffeesatz);
+/*===== nav style ======*/
+#fdw nav select {
+	display:none; /* this is just for the mobile display */
+	
+	
+}
+#fdw nav ul {
+	display:block;
+	margin-top:-100px;
+	margin-left:630px;
+	float:left;
+}
+#fdw nav ul li {
+	display:inline-block;
+	padding:50px 3px 10px;
+	margin-left:7px;
+	position:relative;	
+
+}
+#fdw nav ul li a:link, #fdw nav ul li a:visited {
+	color:#363;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	display:inline-block;
+	font-size:14px;
+	position:relative;
+
+}
+#fdw nav ul li a:hover, #fdw nav ul li a:active {
+	color:#F60;
+	text-decoration:none;
+}
+#fdw nav ul li span {
+	position:absolute;
+	right:-12px;
+	bottom:6px;
+	width:7px;
+	height:8px;
+	margin:0 0 0 3px;
+	float:right;
+	display:block;
+	background:url('images/nav_arrow.png') no-repeat left -8px;
+	font:0/0 a;
+	
+}
+#fdw nav ul li.current {
+	border-bottom:2px solid #e25d29;
+}
+#fdw nav ul li.current a {
+	color:#e25d29;
+	cursor: default;
+}
+#fdw nav ul li.current a span {
+	background:url('../images/nav_arrow.png') no-repeat left 0;
+}
+#fdw nav ul li.current ul li a {
+	cursor:pointer;
+}
+
+	/* cambiar a movil */
+media only screen and (max-width: 1200px) {
+
+		/* nav menu ul & select */
+		#fdw nav ul {
+			display:none;
+		}
+		#fdw nav select {
+			width:10%;
+			display:block;
+			float:left;
+			margin-top:125px;
+			margin-left:-190px;
+			margin-bottom:20px;
+			cursor:pointer;
+			border-radius:12px;
+			padding:6px;
+			background:#f9f9f9;
+			border:1px solid #330;
+			color:#777;
+		}
+}

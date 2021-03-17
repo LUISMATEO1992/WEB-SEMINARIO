@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+<title>WWW.ColegioSeminario.edu.pe</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+<link href="CSS/esti-Index.css" rel="stylesheet" type="text/css">
+<link href="4/js-image-slider.css" rel="stylesheet" type="text/css">
+<link href="ccs-banner/generic.css" rel="stylesheet" type="text/css">
+<link href="ccs-banner/reset.css" rel="stylesheet" type="text/css">
+<link href="ccs-banner/styles.css" rel="stylesheet" type="text/css">
+<link href="ccs-banner/normalize.css" rel="stylesheet" type="text/css">
+ <!-- jQuery lib del servidor de Google ===================== -->
+<script src="JS/jquery-1.7.2.min.js"></script>
+<script src="4/js-image-slider.js" type="text/javascript"></script><!-----script del slider--->
+</script>
+<script>  
+<!--  // la construcción de selección de navegación para la anchura móvil sólo -->
+$(function(){
+	// la construcción de menú de selección
+	$('<select />').appendTo('nav');
+
+	// la construcción de una opción de menú de selección
+	$('<option />', {
+		'selected': 'selected',
+		'value' : '',
+		'text': 'INICIO...'
+
+	}).appendTo('nav select');
+
+	$('nav ul li a').each(function(){
+		var target = $(this);
+
+		$('<option />', {
+			'value' : target.attr('href'),
+			'text': target.text()
+		}).appendTo('nav select');
+
+	});
+
+	// al hacer clic en el enlace
+	$('nav select').on('change',function(){
+		window.location = $(this).find('option:selected').val();
+	});
+});
+
+// Mostrar y ocultar submenú (si se requiere un submenu)
+$(function(){
+	$('nav ul li').hover(
+		function () {
+			//mostrar su submenú
+			$('ul', this).slideDown(150);
+		}, 
+		function () {
+			//Ocultar su submenú
+			$('ul', this).slideUp(150);			
+		}
+	);
+});
+//fin
+</script>
+<script type="text/javascript">
+$(function(){
+  $('.slider').glide({
+    autoplay: 3500,
+    hoverpause: true, // set to false for nonstop rotate
+    arrowRightText: '&rarr;',
+    arrowLeftText: '&larr;'
+  });
+});
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div id="cabecera">
+<img id="logo" src="img/cabezal.fw.png" alt="logo">
+<p id="Redes">REDES SOCIALES:</p> 
+<div id="REDSOCIALES">
+<div id="fb">
+<a target="new" href="https://www.facebook.com/sancarlossanmarcelo.seminario"><img  src="img/fb.png"> </a></div>
+<div id="twt">
+<a target="new" href="https://twitter.com/colegioseminar1"><img  src="img/twter.png"> </a></div>
+<div id="youtoube">
+<a target="new" href="https://www.youtube.com/channel/UC4-xNLoXkXCdRUK5OF4-h_Q"><img  src="img/youtoube.png"> </a></div></div>
+<img id="cuerpo" src="img/CUERPO.png" alt="cuerpo">
+<div id="fdw"><!---menu principal--------->
+					<nav>
+						<ul>
+							<li class="current"><a href="Index.html">INICIO<span class="arrow"></span></a>
+								
+							</li>
+							<li><a href="historia.html">HISTORIA</a></li>
+                            <li><a href="quienes somos.html">QUIÉNES SOMOS</a></li>
+                            <li><a href="Campus.html">CAMPUS</a></li>
+							<li><a href="PersonalDocente.html">PERSONAL DOCENTE</a></li>
+							<li>
+								<a href="Directivos.html">DIRECTIVOS<span class="arrow"></span></a>
+								
+							</li>
+							<li>
+							<a href="Contactanos.html">CONTACTANOS<span class="arrow"></span></a>
+						</li></ul>
+					</nav>
+		</div><!-----fin menu pincipal------->
+        
+  <!---el slider------------------->
+      
+    <div id="sliderFrame">
+        <div id="slider">
+            <img src="img/1-banner.fw.png"/>
+            <img src="img/2-banner.fw.png" />
+            <img src="img/3-banner.fw.png" />
+            <img src="img/4-banner.fw.png" />
+        </div>
+        <!--
+botones de navegación personalizada en ambos lados-->
+        <div class="group1-Wrapper">
+            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+            <a onclick="imageSlider.next()" class="group1-Next"></a>
+        </div>
+        <!--nav bar-->
+        <div style="text-align:center;padding:20px;z-index:20;">
+            <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+            <a id='auto' onclick="switchAutoAdvance()"></a>
+            <a onclick="imageSlider.next()" class="group2-Next"></a>
+        </div>
+    </div>
+    <!------fin del slider----------------->  
+    <p id="presentacion">Bienvenidos a la familia Seminarista:</p>
+    <div>
+          <img id="li-pe" src="img/lineapequeña.fw.png" alt="li-pe"></div>
+      <p id="texto">El colegio Seminario se San Carlos Y San Marcelo de trujillo, cuya entidad promotora es el Arzobispado Metropolitano de Trujillo, sustenta la razón de su ser y de su actividad educativa, en la fuerza educadora del evangelio y en la doctrina y misión de la iglesia católica que como Madre y Maestra de la verdad y del amor de Dios, es conocedora del ser humano. En esta línea, desarrolla una propuesta educativa integral, científica, humanista y católica, de alto nivel académico y valores cívicos y cristianos, en los niveles de primaria y secundaria de menores varones. </p>
+      <div id="video">
+   <iframe width="360" height="240" src="https://www.youtube.com/embed/AS0IhYa80hw" frameborder="0" allowfullscreen></iframe></div>
+<p id="Noticias">Noticias:</p>
+<div id="boletines">
+<a target="new" href="http://convengamostodos.com"><img  src="img/boletine.fw.png"> </a></div>
+<div id="comunicados">
+<a target="new" href="http://convengamostodos.com"><img  src="img/comunicados.fw.png"> </a></div>
+<div id="cuadro"><img id="anuncio" src="img/fi-des.fw.png" alt="anuncio"></div>
+<!----------------------INICIO DE PIE DE PAGINA---------------------------------------------->
+<p id="Informes">Informes:</p>
+<p id="telefono">Teléfono:</p>
+<p id="Direccion">Dirección:</p>
+<p id="n°">044262721</p>
+<p id="lugar">Jr.Gamarra # 251 - Centro Histórico</p>
+<p id="Redes-p">REDES SOCIALES:</p> 
+<div id="REDSOCIALES-pie">
+<div id="fb">
+<a target="new" href="https://www.facebook.com/sancarlossanmarcelo.seminario"><img  src="img/fb.png"> </a></div>
+<div id="twt">
+<a target="new" href="https://twitter.com/colegioseminar1"><img  src="img/twter.png"> </a></div>
+<div id="youtoube">
+<a target="new" href="https://www.youtube.com/channel/UC4-xNLoXkXCdRUK5OF4-h_Q"><img  src="img/youtoube.png"> </a></div></div>
+<div id="descarga2"><a target="new" href="archivos/REQUISITOS.pdf" download="ficha"><img  src="img/dw2.fw.png"> </a></div>
+</div>
+</div>
+</body>
+</html>
